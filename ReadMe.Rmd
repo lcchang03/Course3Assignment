@@ -1,0 +1,41 @@
+---
+title: "ReadMe"
+author: "Lon Chang"
+date: "January 15, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+This repo is for the Coursera Data Science specialization, course 3, week 4 assignment. In this assignment we are to manipulate data on wearable activity tracking. The script includes importing files, combining imported data, manipulating data sets, and exporting the tidy data that is created from the various data sets.
+
+The included script assumes you have downloaded the required data set. it is available here: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The starting files were split between training and testing datasets. Each of these data sets had one file denoting the activity (1-6), another one denoting the participant (1-30), and a series of measures for individual activites (or features). The data was manipulated to reatin only the features that contained averages (mean) or standard deviations (std). The averages included any feature with the name mean in it, such as meanFreq and gravityMean.
+
+The tidy data set that is created is a thin data set. Each row only has 1 varable and its value along with its associated activity and participant number. The resulting tidy data set has 14,220 rows and 4 columns.
+
+
+The data set includes the following files:
+  -ReadMe.html
+  
+  -run_analysis.R : the script that was run on the various tracking data sets to create the tidy data set
+  
+  -step5result.txt : the resulting tidy data set from the run_analysis.R script
+  
+  -codebook.txt : the code book for step5result.txt
+
+
+
+License: use of this wearable activity tracking data set requires acknowledgement to the data set creator:
+
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+
+Last edited 1/15/17
